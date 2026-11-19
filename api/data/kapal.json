@@ -1,0 +1,222 @@
+[
+  {
+    "id": "peti-kemas",
+    "nama": "Kapal Peti Kemas",
+    "namaInggris": "Container Ship",
+    "kategori": "Kargo",
+    "ringkas": "Mengangkut barang dalam kontainer standar 20 dan 40 kaki.",
+    "deskripsi": "Kapal peti kemas membawa muatan yang sudah dikemas di dalam kontainer berukuran standar, sehingga bongkar muat bisa dilakukan cepat dengan crane dermaga. Kapasitasnya dihitung dalam TEU (twenty-foot equivalent unit). Kapal jenis ini menjadi tulang punggung perdagangan antarpulau dan internasional.",
+    "panjang": "150 – 400 m",
+    "kapasitas": "1.000 – 24.000 TEU",
+    "propulsi": "Mesin diesel 2-tak putaran rendah, langsung memutar baling-baling",
+    "sistemKontrol": [
+      "Integrated Bridge System (radar, ECDIS, autopilot)",
+      "Alarm & Monitoring System kamar mesin",
+      "Pemantauan suhu kontainer berpendingin (reefer)",
+      "Kontrol ballast untuk menjaga trim dan stabilitas"
+    ]
+  },
+  {
+    "id": "curah-kering",
+    "nama": "Kapal Curah Kering",
+    "namaInggris": "Bulk Carrier",
+    "kategori": "Kargo",
+    "ringkas": "Membawa muatan curah seperti batu bara, bijih nikel, dan gandum.",
+    "deskripsi": "Bulk carrier memuat barang tanpa kemasan langsung ke dalam palka. Di Indonesia kapal ini banyak dipakai untuk angkutan batu bara dari Kalimantan dan Sumatera serta bijih nikel dari Sulawesi. Urutan pemuatan antarpalka harus diatur agar badan kapal tidak mengalami tegangan berlebih.",
+    "panjang": "130 – 300 m",
+    "kapasitas": "10.000 – 200.000 DWT",
+    "propulsi": "Mesin diesel 2-tak, satu baling-baling",
+    "sistemKontrol": [
+      "Loading computer untuk menghitung tegangan lambung",
+      "Sensor level dan deteksi air di palka",
+      "Kontrol pompa dan katup ballast",
+      "Pemantauan mesin induk dan generator"
+    ]
+  },
+  {
+    "id": "tanker",
+    "nama": "Kapal Tanker",
+    "namaInggris": "Oil / Product Tanker",
+    "kategori": "Energi",
+    "ringkas": "Mengangkut minyak mentah atau BBM dalam tangki kargo.",
+    "deskripsi": "Tanker memiliki banyak tangki terpisah yang diisi dan dikosongkan melalui pompa kargo. Kapal modern wajib berlambung ganda untuk mengurangi risiko tumpahan. Seluruh operasi kargo dikendalikan dari ruang kontrol kargo dengan pengawasan tekanan, level, dan gas.",
+    "panjang": "100 – 330 m",
+    "kapasitas": "5.000 – 300.000 DWT",
+    "propulsi": "Mesin diesel 2-tak, satu baling-baling",
+    "sistemKontrol": [
+      "Cargo Control Room untuk pompa dan katup kargo",
+      "Inert Gas System untuk mencegah ledakan di tangki",
+      "Radar level dan alarm overfill tangki",
+      "Deteksi gas hidrokarbon"
+    ]
+  },
+  {
+    "id": "lng-carrier",
+    "nama": "Kapal Pengangkut LNG",
+    "namaInggris": "LNG Carrier",
+    "kategori": "Energi",
+    "ringkas": "Membawa gas alam cair pada suhu sekitar −162 °C.",
+    "deskripsi": "Gas alam dicairkan agar volumenya menyusut drastis, lalu disimpan di tangki berinsulasi tebal. Sebagian kecil muatan menguap selama pelayaran (boil-off gas) dan pada banyak kapal dimanfaatkan sebagai bahan bakar mesin dual-fuel.",
+    "panjang": "250 – 300 m",
+    "kapasitas": "125.000 – 270.000 m³",
+    "propulsi": "Mesin dual-fuel (gas/diesel) atau turbin uap pada kapal lama",
+    "sistemKontrol": [
+      "Pemantauan suhu dan tekanan tangki kargo",
+      "Pengelolaan boil-off gas",
+      "Emergency Shutdown (ESD) saat bongkar muat",
+      "Deteksi gas dan kebocoran"
+    ]
+  },
+  {
+    "id": "ro-ro",
+    "nama": "Kapal Ro-Ro Penyeberangan",
+    "namaInggris": "Ro-Ro Ferry",
+    "kategori": "Penumpang",
+    "ringkas": "Kendaraan masuk dan keluar sendiri lewat pintu rampa.",
+    "deskripsi": "Roll-on/roll-off berarti kendaraan naik dan turun dengan rodanya sendiri melalui rampa di haluan atau buritan. Kapal jenis ini melayani lintasan penyeberangan seperti Merak–Bakauheni dan Ketapang–Gilimanuk, membawa penumpang sekaligus truk dan mobil.",
+    "panjang": "40 – 150 m",
+    "kapasitas": "20 – 200 kendaraan, ratusan penumpang",
+    "propulsi": "Dua mesin diesel 4-tak, dua baling-baling",
+    "sistemKontrol": [
+      "Kontrol hidraulik pintu rampa",
+      "Pemantauan stabilitas saat kendaraan naik",
+      "CCTV dek kendaraan",
+      "Deteksi dan pemadam kebakaran dek"
+    ]
+  },
+  {
+    "id": "penumpang",
+    "nama": "Kapal Penumpang",
+    "namaInggris": "Passenger Ship",
+    "kategori": "Penumpang",
+    "ringkas": "Melayani rute antarpulau jarak jauh dengan kabin dan dek penumpang.",
+    "deskripsi": "Kapal penumpang menghubungkan pulau-pulau yang berjauhan dan singgah di banyak pelabuhan dalam satu rute. Bagi daerah terpencil, kapal ini sering menjadi satu-satunya angkutan umum yang terjangkau.",
+    "panjang": "60 – 150 m",
+    "kapasitas": "500 – 3.000 penumpang",
+    "propulsi": "Dua mesin diesel 4-tak, dua baling-baling",
+    "sistemKontrol": [
+      "Integrated Bridge System",
+      "Sistem alarm umum dan public address",
+      "Pemantauan pintu kedap air",
+      "Pembangkit dan distribusi listrik"
+    ]
+  },
+  {
+    "id": "ahts",
+    "nama": "Kapal AHTS",
+    "namaInggris": "Anchor Handling Tug Supply",
+    "kategori": "Offshore",
+    "ringkas": "Menarik rig, memasang jangkar, sekaligus memasok logistik.",
+    "deskripsi": "AHTS menggabungkan fungsi kapal tunda, penanganan jangkar, dan pemasok. Dek belakangnya terbuka dan rendah dengan winch bertenaga besar untuk menarik serta memasang jangkar rig pengeboran lepas pantai.",
+    "panjang": "50 – 95 m",
+    "kapasitas": "Bollard pull 60 – 300 ton",
+    "propulsi": "Diesel dengan baling-baling CPP, plus bow & stern thruster",
+    "sistemKontrol": [
+      "Kontrol winch jangkar dan towing",
+      "Dynamic Positioning (DP1/DP2)",
+      "Kontrol pitch baling-baling (CPP)",
+      "Pemantauan beban tali tarik"
+    ]
+  },
+  {
+    "id": "psv",
+    "nama": "Kapal PSV",
+    "namaInggris": "Platform Supply Vessel",
+    "kategori": "Offshore",
+    "ringkas": "Mengirim air, BBM, lumpur bor, dan barang ke anjungan lepas pantai.",
+    "deskripsi": "PSV bolak-balik antara pangkalan darat dan anjungan migas. Saat bongkar muat di dekat anjungan, kapal harus diam di posisinya walau ada ombak dan arus, sehingga mengandalkan sistem dynamic positioning.",
+    "panjang": "50 – 100 m",
+    "kapasitas": "Dek kargo 500 – 1.000 m²",
+    "propulsi": "Diesel-elektrik dengan azimuth thruster",
+    "sistemKontrol": [
+      "Dynamic Positioning (umumnya DP2)",
+      "Power Management System diesel-elektrik",
+      "Kontrol pompa kargo cair",
+      "Sensor referensi posisi (DGPS, laser, taut wire)"
+    ]
+  },
+  {
+    "id": "fpso",
+    "nama": "FPSO",
+    "namaInggris": "Floating Production Storage & Offloading",
+    "kategori": "Offshore",
+    "ringkas": "Fasilitas produksi migas terapung yang menyimpan dan menyalurkan minyak.",
+    "deskripsi": "FPSO menerima aliran dari sumur bawah laut, memisahkan minyak, gas, dan air, lalu menyimpan minyak di lambungnya sampai dijemput tanker. Banyak FPSO dibuat dari konversi tanker lama dan ditambatkan di satu titik selama bertahun-tahun.",
+    "panjang": "200 – 330 m",
+    "kapasitas": "Penyimpanan 0,5 – 2 juta barel",
+    "propulsi": "Umumnya tanpa propulsi, ditambat dengan turret atau spread mooring",
+    "sistemKontrol": [
+      "Distributed Control System (DCS) proses",
+      "Emergency Shutdown System (ESD)",
+      "Fire & Gas detection",
+      "Pemantauan tambat dan turret"
+    ]
+  },
+  {
+    "id": "tunda",
+    "nama": "Kapal Tunda",
+    "namaInggris": "Tugboat",
+    "kategori": "Layanan Pelabuhan",
+    "ringkas": "Kapal kecil bertenaga besar untuk mendorong dan menarik kapal lain.",
+    "deskripsi": "Kapal tunda membantu kapal besar sandar dan lepas sandar di kolam pelabuhan yang sempit. Kekuatannya diukur dengan bollard pull, yaitu gaya tarik saat kapal diam. Banyak kapal tunda modern memakai azimuth stern drive agar bisa berputar di tempat.",
+    "panjang": "20 – 40 m",
+    "kapasitas": "Bollard pull 20 – 90 ton",
+    "propulsi": "Dua mesin diesel dengan azimuth stern drive",
+    "sistemKontrol": [
+      "Kontrol joystick azimuth",
+      "Kontrol winch towing",
+      "Pemantauan mesin dan bahan bakar",
+      "Komunikasi VHF dengan pandu"
+    ]
+  },
+  {
+    "id": "keruk",
+    "nama": "Kapal Keruk",
+    "namaInggris": "Trailing Suction Hopper Dredger",
+    "kategori": "Layanan Pelabuhan",
+    "ringkas": "Mengisap sedimen dasar laut untuk menjaga kedalaman alur.",
+    "deskripsi": "Sedimen dari sungai terus mengendap di alur pelayaran. Kapal keruk menurunkan pipa isap ke dasar laut, memompa lumpur ke ruang muat (hopper), lalu membuangnya di lokasi yang ditentukan. Tanpa pengerukan rutin, kapal besar tidak bisa masuk pelabuhan.",
+    "panjang": "60 – 200 m",
+    "kapasitas": "Hopper 2.000 – 30.000 m³",
+    "propulsi": "Diesel, sebagian tenaga dipakai untuk pompa keruk",
+    "sistemKontrol": [
+      "Kontrol posisi dan sudut pipa isap",
+      "Pemantauan densitas dan laju aliran lumpur",
+      "Kontrol pompa keruk",
+      "Pencatatan kedalaman dan jalur keruk"
+    ]
+  },
+  {
+    "id": "pinisi",
+    "nama": "Kapal Pinisi",
+    "namaInggris": "Pinisi Schooner",
+    "kategori": "Tradisional",
+    "ringkas": "Kapal kayu layar khas Sulawesi Selatan dengan dua tiang.",
+    "deskripsi": "Pinisi dibangun dari kayu oleh pengrajin Bugis-Makassar, terutama di Tana Beru, Bulukumba. Ciri khasnya dua tiang dengan tujuh layar. Seni pembuatan pinisi diakui UNESCO sebagai Warisan Budaya Takbenda pada 2017. Kini banyak pinisi diberi mesin dan dipakai untuk wisata bahari.",
+    "panjang": "15 – 50 m",
+    "kapasitas": "Puluhan hingga ratusan ton",
+    "propulsi": "Layar, umumnya ditambah mesin diesel bantu",
+    "sistemKontrol": [
+      "Kemudi dan tali-temali manual",
+      "GPS dan radio VHF pada pinisi modern",
+      "Pompa lambung (bilge pump)"
+    ]
+  },
+  {
+    "id": "pukat-cincin",
+    "nama": "Kapal Pukat Cincin",
+    "namaInggris": "Purse Seiner",
+    "kategori": "Perikanan",
+    "ringkas": "Menangkap ikan pelagis dengan jaring yang dilingkarkan.",
+    "deskripsi": "Kapal pukat cincin melingkari gerombolan ikan seperti cakalang dan tongkol dengan jaring panjang, lalu menarik bagian bawahnya hingga tertutup seperti kantong. Banyak beroperasi dari pelabuhan perikanan di Sulawesi Utara, Maluku, dan Bali.",
+    "panjang": "15 – 70 m",
+    "kapasitas": "10 – 1.000 ton ikan",
+    "propulsi": "Mesin diesel 4-tak, satu baling-baling",
+    "sistemKontrol": [
+      "Fish finder dan sonar",
+      "Kontrol power block penarik jaring",
+      "Pendingin palka ikan",
+      "Transponder VMS pemantau kapal perikanan"
+    ]
+  }
+]
