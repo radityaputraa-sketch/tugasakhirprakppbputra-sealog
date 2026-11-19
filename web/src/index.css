@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #e9e4d6;
+  color: #14212e;
+}
+
+/* Bingkai aplikasi selebar layar HP */
+.app {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f2efe6;
+}
+
+.page {
+  padding: 20px 20px 90px; /* bawah 90px supaya konten tidak tertutup bottom nav */
+}
+
+/* Bottom navigation bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: 64px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #fbfaf5;
+  border-top: 1px solid #14212e;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #6b7380;
+  text-decoration: none;
+}
+
+.tab.active {
+  color: #14212e;
+  font-weight: 600;
+  border-top: 3px solid #d4471a;
+}
