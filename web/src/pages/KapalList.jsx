@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../lib/api.js';
+import { pad2 } from '../lib/format.js';
+import ShipSilhouette from '../components/ShipSilhouette.jsx';
 import { ErrorBox, Loading } from '../components/Status.jsx';
+import { Chips, Empty, PageHead, SearchBox } from '../components/ui.jsx';
+import { IconChevron } from '../components/Icons.jsx';
 
 export default function KapalList() {
   const [cari, setCari] = useState('');
@@ -21,37 +25,31 @@ export default function KapalList() {
 
   return (
     <div className="page">
-      <h1>Jenis Kapal</h1>
+      <PageHead kicker="Katalog · 01" judul="Jenis Kapal" meta={data ? `${pad2(kapal.length)} entri` : error ? '—' : 'memuat…'} />
 
-      <input
-        className="search"
-        type="search"
-        placeholder="Cari kapal, mis. tanker"
-        value={cari}
-        onChange={(e) => setCari(e.target.value)}
-      />
-
-      <div className="chips">
-        <button className={kategori === '' ? 'chip on' : 'chip'} onClick={() => setKategori('')}>
-          Semua
-        </button>
-        {daftarKategori.map((k) => (
-          <button key={k} className={kategori === k ? 'chip on' : 'chip'} onClick={() => setKategori(k)}>
-            {k}
-          </button>
-        ))}
+      <div className="toolbar">
+        <SearchBox value={cari} onChange={setCari} placeholder="Cari kapal, mis. tanker" />
+        <Chips pilihan={daftarKategori} value={kategori} onChange={setKategori} />
       </div>
 
       {loading && !data && <Loading />}
       {error && <ErrorBox pesan={error} onCobaLagi={muatUlang} />}
-      {data && kapal.length === 0 && <p className="status">Tidak ada kapal yang cocok.</p>}
+      {data && kapal.length === 0 && (
+        <Empty judul="Tidak ada yang cocok">Coba kata kunci lain atau pilih kategori "Semua".</Empty>
+      )}
 
-      <ul className="list">
-        {kapal.map((k) => (
+      <ul className="rows">
+        {kapal.map((k, i) => (
           <li key={k.id}>
-            <Link to={`/kapal/${k.id}`} className="list-item">
-              <span className="list-title">{k.nama}</span>
-              <span className="list-sub">{k.namaInggris} · {k.kategori}</span>
+            <Link to={`/kapal/${k.id}`} className="row">
+              <span className="row-num mono">{pad2(i + 1)}</span>
+              <ShipSilhouette id={k.id} className="row-ship" water={false} />
+              <span className="row-main">
+                <span className="row-title">{k.nama}</span>
+                <span className="row-sub mono">{k.namaInggris}</span>
+              </span>
+              <span className="row-tag">{k.kategori}</span>
+              <IconChevron className="row-chev" />
             </Link>
           </li>
         ))}

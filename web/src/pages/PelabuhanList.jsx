@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../lib/api.js';
+import { formatLat, formatLon, pad2 } from '../lib/format.js';
 import { ErrorBox, Loading } from '../components/Status.jsx';
+import { Chips, Empty, PageHead, SearchBox } from '../components/ui.jsx';
 
 export default function PelabuhanList() {
   const [cari, setCari] = useState('');
@@ -19,37 +21,35 @@ export default function PelabuhanList() {
 
   return (
     <div className="page">
-      <h1>Pelabuhan</h1>
+      <PageHead kicker="Katalog · 02" judul="Pelabuhan" meta={data ? `${pad2(pelabuhan.length)} entri` : error ? '—' : 'memuat…'} />
 
-      <input
-        className="search"
-        type="search"
-        placeholder="Cari nama, kota, provinsi"
-        value={cari}
-        onChange={(e) => setCari(e.target.value)}
-      />
-
-      <div className="chips">
-        <button className={pulau === '' ? 'chip on' : 'chip'} onClick={() => setPulau('')}>
-          Semua
-        </button>
-        {daftarPulau.map((p) => (
-          <button key={p} className={pulau === p ? 'chip on' : 'chip'} onClick={() => setPulau(p)}>
-            {p}
-          </button>
-        ))}
+      <div className="toolbar">
+        <SearchBox value={cari} onChange={setCari} placeholder="Cari nama, kota, provinsi" />
+        <Chips pilihan={daftarPulau} value={pulau} onChange={setPulau} />
       </div>
 
       {loading && !data && <Loading />}
       {error && <ErrorBox pesan={error} onCobaLagi={muatUlang} />}
-      {data && pelabuhan.length === 0 && <p className="status">Tidak ada pelabuhan yang cocok.</p>}
+      {data && pelabuhan.length === 0 && (
+        <Empty judul="Tidak ada yang cocok">Coba kata kunci lain atau pilih wilayah "Semua".</Empty>
+      )}
 
-      <ul className="list">
-        {pelabuhan.map((p) => (
+      <ul className="rows">
+        {pelabuhan.map((p, i) => (
           <li key={p.id}>
-            <Link to={`/pelabuhan/${p.id}`} className="list-item">
-              <span className="list-title">{p.nama}</span>
-              <span className="list-sub">{p.kota}, {p.provinsi} · {p.jenis}</span>
+            <Link to={`/pelabuhan/${p.id}`} className="row">
+              <span className="row-num mono">{pad2(i + 1)}</span>
+              <span className="row-main">
+                <span className="row-title">{p.nama}</span>
+                <span className="row-sub">
+                  {p.kota} · <span className="muted">{p.jenis}</span>
+                </span>
+              </span>
+              <span className="row-coord mono">
+                {formatLat(p.lat)}
+                <br />
+                {formatLon(p.lon)}
+              </span>
             </Link>
           </li>
         ))}
